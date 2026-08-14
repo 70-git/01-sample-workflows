@@ -1,0 +1,11 @@
+name: context-demo
+on:
+  push:
+jobs:
+  context-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "print info"
+        run: |
+          echo '${{ toJSON(github) }}'
+
