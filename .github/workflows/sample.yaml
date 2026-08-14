@@ -1,0 +1,11 @@
+name: sample-workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sampleworkflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "sample"
+        run: echo "sample-workflows"
