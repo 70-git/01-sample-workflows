@@ -1,0 +1,12 @@
+
+name: triggers-demo
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sampleworkflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "push-trigger"
+        run: echo "This is push trigger"
