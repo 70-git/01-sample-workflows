@@ -1,0 +1,43 @@
+name: inputs-demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment"
+        required: true
+        default: "dev"
+
+      project:
+        description: "Project name"
+        required: true
+        default: "roboshop"
+
+      component:
+        description: "Component name"
+        required: true
+        default: "frontend"
+
+      local:
+        description: "Provisioning method"
+        required: true
+        default: "terraform"
+
+      tags:
+        description: "Enable tags"
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  inputs-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "This is inputs-demo"
+        run: |
+          echo "environment: ${{ inputs.environment }}"
+          echo "project: ${{ inputs.project }}"
+          echo "component: ${{ inputs.component }}"
+          echo "local: ${{ inputs.local }}"
+          echo "tags: ${{ inputs.tags }}"
