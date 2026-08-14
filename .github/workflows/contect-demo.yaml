@@ -8,4 +8,5 @@ jobs:
       - name: "print info"
         run: |
           echo '${{ toJSON(github) }}'
+          echo '${{github.ref_name}}'
 
