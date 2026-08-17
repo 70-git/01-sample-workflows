@@ -1,0 +1,12 @@
+name: sample-workflow
+on:
+  workflow_dispatch:
+    
+jobs:
+  feature-pipeline:
+    uses: 70-git/common-workflows/.github/workflows/nodejs-featurepipeline.yaml@main
+    with:
+      description: "Environment"
+      required: true
+      default: "dev"
+      type: string
