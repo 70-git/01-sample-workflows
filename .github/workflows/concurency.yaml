@@ -7,6 +7,6 @@ jobs:
   sampleworkflow:
     runs-on: ubuntu-latest
     steps:
-      - name: "sample0123"
+      - name: "sample01234"
         run: sleep 60
         
