@@ -1,0 +1,16 @@
+name: conditions-demo
+on: [push]
+jobs:
+  sample-conditions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test conditions main branch
+        if: github.ref_name == 'main'
+        run: |
+          echo "The branch is main, this step will be executed"
+
+      - name: Feature branch
+        if: github.ref_name == 'feature/*'
+        run: |
+          echo "The branch is feature, this step will be executed"
