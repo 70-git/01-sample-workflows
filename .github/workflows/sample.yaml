@@ -1,5 +1,4 @@
 name: sample-workflow
-
 on:
   workflow_dispatch:
 
