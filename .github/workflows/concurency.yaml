@@ -1,0 +1,11 @@
+name: main-workflow
+on: [push]
+concurrency:
+    group: ${{ github.workflow }}-$ {{ github.ref_name }}
+    cancel-in-progress: true # if present execution will be cancelled, new trigeer will happen
+jobs:
+  sampleworkflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "sample"
+        run: sleep 60
