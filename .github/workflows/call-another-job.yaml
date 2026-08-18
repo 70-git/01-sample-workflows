@@ -1,12 +1,11 @@
 name: sample-workflow
 on:
   workflow_dispatch:
-    
+
 jobs:
   feature-pipeline:
-    uses: 70-git/common-workflows/.github/workflows/nodejs-featurepipeline.yaml@main
+    uses: 70-git/common-workflows/.github/workflows/test-workflow.yml@main
     with:
-      description: "Environment"
-      required: true
-      default: "dev"
-      type: string
+      environment: dev
+      project: roboshop
+      component: frontend
