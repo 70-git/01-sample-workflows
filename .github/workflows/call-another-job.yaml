@@ -9,4 +9,4 @@ jobs:
       description: "Environment"
       required: true
       default: "dev"
-      
+      type: string
