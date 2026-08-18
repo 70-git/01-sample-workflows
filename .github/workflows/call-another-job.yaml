@@ -1,6 +1,5 @@
-name: sample-workflow
-on:
-  workflow_dispatch:
+name: feature-pipeline
+on:  [push]
 
 jobs:
   feature-pipeline:
