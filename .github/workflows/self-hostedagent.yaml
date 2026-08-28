@@ -1,4 +1,4 @@
-name: sample-workflow
+name: selfhosted-workflow
 on: [push]
 jobs:
   self-hosted:
@@ -6,3 +6,4 @@ jobs:
     steps:
       - name: "sample"
         run: echo "self-hosted Agent"
+        
